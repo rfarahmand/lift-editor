@@ -33,10 +33,13 @@ class Boot {
     // where to search snippet
     LiftRules.addToPackages("com.rfarahmand")
     Schemifier.schemify(true, Schemifier.infoF _, User)
-
+     LiftRules.useXhtmlMimeType = false; 
+    
     // Build SiteMap
     def sitemap() = SiteMap(
-      Menu("Home") / "index" >> User.AddUserMenusAfter, // Simple menu form
+      Menu("Home") / "index",
+      Menu.i("Create") / "create" 	 
+      >> User.AddUserMenusAfter, // Simple menu form
       // Menu with special Link
       Menu(Loc("Static", Link(List("static"), true, "/static/index"), 
 	       "Static Content")))
