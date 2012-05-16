@@ -1,0 +1,16 @@
+<div class="lift:surround?with=default;at=content">
+<form class="lift:Create?post" style="height:90%; width: 80%;">
+	 <label style="color: white; "><h2>Title of your Post...</h2></label>
+	 <select id="titleText" style="width: 50%; "></select>
+	 <br />
+	 <label style="color: white; "><h2>Expand your Post...</h2></label>
+	 <textarea id="bodyText" style="height:90%; width: 89%;">mmmmmm</textarea>
+	 <script type="text/javascript">
+			//<![CDATA[
+					CKEDITOR.replace( 'bodyText' );
+			//]]>
+			</script>
+	<br />
+	<button type="submit" id="submit" style="float:right;">save Post</button>
+</form>
+</div>
